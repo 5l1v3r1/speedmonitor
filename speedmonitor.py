@@ -57,7 +57,7 @@ speed_upload = results['upload']
 speed_download = results['download']
 
 # Insert data into DB
-conn.execute("INSERT INTO speed VALUES (?,?,?,?,date('now'))",(speed_ip,speed_ping_time,speed_upload,speed_download))
+conn.execute("INSERT INTO speed VALUES (?,?,?,?,datetime('now'))",(speed_ip,speed_ping_time,speed_upload,speed_download))
 # Commit and close
 conn.commit()
 conn.close()
